@@ -1,0 +1,17 @@
+.column{
+    float:left;
+    width:12%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+img {
+    float: left;
+    margin: 12px;
+}
+p {
+    text-align: justify;
+    width: 25%;
+}
