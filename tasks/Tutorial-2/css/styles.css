@@ -1,0 +1,21 @@
+input{
+    font-size : 1.2em;
+    font-family : Helvetica;
+}
+textarea{
+    font-size : 0.8em;
+    font-family :Arial;
+    font-style :italic; 
+}
+button{
+    font-size : 1.4em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+label{
+    font-size: 1.2em;
+    font-family: 'Times New Roman';
+}
+:required{
+    background: red;
+}
+
