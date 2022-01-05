@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <script>
+        function conversion(){
+            let celsius = document.getElementById("celsius");
+            let fahrenheit = document.getElementById("fahrenheit");
+            let choice = document.getElementById("choice")
+            if (choice.value === "CtoF") {
+                if (celsius.value !=="") {
+                fahrenheit.value = Math.round((celsius.value * 1.8 + 32)*10)/10;
+                }
+            } else if (choice.value ==="FtoC"){
+                if (fahrenheit.value !=="") {
+                    celsius.value = Math.round(((fahrenheit.value - 32) / 1.8)*10)/10;
+                }
+            }
+            
+        }
+    </script>
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Celsius-Fahrenheit converter</h1>
+    <form>
+        <label for="choice">Choose the conversion type</label><br>
+        <select name = "choice" id="choice">
+            <option value="CtoF">Celsius to Fahrenheit</option>
+            <option value="FtoC">Fahrenheit to Celsius</option>
+        </select><br>
+        <label for="celsius">Celsius :</label> <br>
+        <input type="number" id="celsius"><br>
+        <label for="fahrenheit">Fahrenheit</label><br>
+        <input type="number" id="fahrenheit">
+        <button onclick="conversion()" type="button">convert</button>
+    </form>
+</body>
+</html>

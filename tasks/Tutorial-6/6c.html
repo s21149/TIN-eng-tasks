@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <script>
+        function validate() {
+            let phoneNumber = document.getElementById("phoneNumber");
+            let email = document.getElementById("email");
+            let phoneErr = document.querySelector("#phoneError");
+            let emailErr = document.querySelector("#emailError");
+            if (phoneNumber.value === "" || isNaN(phoneNumber.value) || phoneNumber.value.toString().length !== 9) {
+                phoneErr.style.color = "red";
+                phoneErr.innerHTML = "Phone number invalid. Should be : 9 digits"
+                phoneNumber.style.color="red";
+                phoneNumber.focus();
+                return false;
+            } else {
+                phoneNumber.style.color="black";
+                phoneErr.style.color = "green";
+                phoneErr.innerHTML = "Ok."
+            }
+            if (! isValidEmail(email.value)) {
+                emailErr.style.color = "red";
+                emailErr.innerHTML = " Email address is invalid."
+                email.style.color = "red";
+                email.focus();
+                return false;
+            } else {
+                email.style.color="black";
+                emailErr.style.color = "green";
+                emailErr.innerHTML = "Ok.";
+            }
+            return true;
+        }
+        function isValidEmail(email) {
+            return email.toLowerCase().match(/\S+@\S+\.\S+/);
+        }
+    </script>
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Task-C</h1>
+    <form onsubmit=return(validate())>
+        <label for="phoneNumber">Phone number :</label><br>
+        <input type="text" id="phoneNumber"> <div id="phoneError"></div><br>
+        <label for="email">Email : </label><br>
+        <input type="text" id="email"><div id="emailError"></div><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
