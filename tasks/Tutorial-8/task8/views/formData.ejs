@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SampleFormData</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>SampleFormData</h1>
+    <% let formInputObj = JSON.parse(formInput)%>
+    <p>firstName = <%=formInputObj.firstName %></p>
+    <p>LastName = <%=formInputObj.lastName %></p>
+    <p>Age = <%=formInputObj.age %></p>
+  </body>
+</html>

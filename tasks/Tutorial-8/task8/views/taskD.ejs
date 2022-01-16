@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your_JSON_Input</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Your JSON input: </h1>
+    <%let inputObject=JSON.parse(jsonInputObject);%>
+    <%Object.entries(inputObject).forEach((entry) => {%>
+        <%const [key, value] = entry;%>
+        <p><%=(`${key} : ${value}`)%></p>
+      <%});%>
+  </body>
+</html>
