@@ -15,7 +15,7 @@ const distForm = document.getElementById("distForm");
 tempForm.addEventListener("submit", (event) => {
   if (celsiusValue.value !== 0) {
     fahrenheitValue.value = Celsius.convertToFahrenheit(celsiusValue.value);
-    Kelvin.value = Celsius.convertToKelvin(celsiusValue.value);
+    kelvinValue.value = Celsius.convertToKelvin(celsiusValue.value);
   } else if (fahrenheitValue.value !== 0) {
     celsiusValue.value = Fahrenheit.convertToCelsius(fahrenheitValue.value);
     kelvinValue.value = Fahrenheit.convertToKelvin(fahrenheitValue.value);
